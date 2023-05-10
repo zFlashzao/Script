@@ -4,7 +4,7 @@ var nsteps = 200;
 var worker; //parallel thread for calculations
 var has_archer = game_data.units.includes("archer");
 var duration_factor, duration_exponent, duration_initial_seconds;
-var hours = 6;
+var hours = 10;
 var max_spear = -1;
 var max_sword = -1;
 var max_axe = -1;
