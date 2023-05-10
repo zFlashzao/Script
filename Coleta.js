@@ -581,7 +581,7 @@ const button = document.querySelector("btn btn-default free_send_button");
 button.dispatchEvent(evento);
 */
         
-var elemento = document.getElementsByClassName('btn btn-default free_send_button');
+const elemento = document.getElementsByClassName('btn btn-default free_send_button');
 
 // Crie um novo evento de tecla pressionada
 var evento = new KeyboardEvent('keydown', {
