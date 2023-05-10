@@ -552,17 +552,5 @@ function successfunc(data)
 run_all();
 
 
-// Encontre o elemento em que você deseja pressionar a tecla Enter
-var elemento = document.getElementById('free_send_button');
-
-// Crie um novo evento de tecla pressionada
-var evento = new KeyboardEvent('keydown', {
-  key: 'Enter',
-  keyCode: 13,
-  bubbles: true,
-  cancelable: true
-});
-
-// Dispare o evento no elemento
-triggerClick(elemento);
+document.getElementById('free_send_button').click();
 
