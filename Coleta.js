@@ -552,12 +552,10 @@ function successfunc(data)
 
 run_all();
 
-for (let i = 3; i >= 0; i--) {
-  const selector = `#elemento-${i}`;
-  const elemento = document.querySelector("a.btn.btn-default.free_send_button");
-  if(elemento){
-  elemento.Click();
-  }
-}
+      setTimeout(()=> {
+elemento = document.querySelector("a.btn.btn-default.free_send_button");
+    if(elemento){
+    elemento.click();
+    }},4000);
 
 
