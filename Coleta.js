@@ -567,7 +567,7 @@ var evento = new KeyboardEvent('keydown', {
 button.dispatchEvent(evento);
 
 "[class*='free_send_button']"
-*/
+
 
 const button = document.querySelector("btn btn-default free_send_button");
 
@@ -579,3 +579,16 @@ const button = document.querySelector("btn btn-default free_send_button");
 });
 
 button.dispatchEvent(evento);
+*/
+        
+var elemento = document.getElementsByClassName('btn btn-default free_send_button');
+
+// Crie um novo evento de tecla pressionada
+var evento = new KeyboardEvent('keydown', {
+  key: 'Enter',
+  keyCode: 13,
+  bubbles: true,
+  cancelable: true
+});
+
+elemento.dispatchEvent(evento);
