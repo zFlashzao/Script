@@ -552,10 +552,11 @@ function successfunc(data)
 
 run_all();
 
-elemento = document.querySelector("a.btn.btn-default.free_send_button");
+setTimeout(()=> {
+    elemento = document.querySelector("a.btn.btn-default.free_send_button");
     if(elemento){
     elemento.click();
-    }
+    }, 8000);
 
     
 
