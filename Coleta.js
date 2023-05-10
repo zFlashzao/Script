@@ -595,7 +595,6 @@ if (button) {
   cancelable: 'true'
 });
   button.dispatchEvent(evento);
-  trigger(button);
   console.log('Botao rodou');
 } else {
   console.log('O botão não foi encontrado.');
