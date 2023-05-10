@@ -580,9 +580,14 @@ const button = document.querySelector("btn btn-default free_send_button");
 
 button.dispatchEvent(evento);
 */
-        
-const button = document.querySelector('btn btn-default free_send_button');
+// Selecione o botão
+const button = document.querySelector('free_send_button');
 
-// Pressione a tecla "Enter" no botão
-const pressionarEnter = new KeyboardEvent('keydown', { keyCode: 13 });
-button.dispatchEvent(pressionarEnter);
+// Verifique se o botão foi encontrado antes de pressionar a tecla "Enter"
+if (button) {
+  // Pressione a tecla "Enter" no botão
+  const pressionarEnter = new KeyboardEvent('keydown', { keyCode: 13 });
+  button.dispatchEvent(pressionarEnter);
+} else {
+  console.log('O botão não foi encontrado.');
+}
