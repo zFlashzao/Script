@@ -587,8 +587,13 @@ const button = document.querySelector('a.btn.btn-default.free_send_button');
 if (button) {
   // Pressione a tecla "Enter" no botão
   console.log('O botão FOI encontrado.');
-  const pressionarEnter = new KeyboardEvent('keydown', { keyCode: 13 });
-  button.dispatchEvent(pressionarEnter);
+  var evento = new KeyboardEvent('keydown', {
+  key: 'Enter',
+  keyCode: 13,
+  bubbles: true,
+  cancelable: true
+});
+  button.dispatchEvent(evento);
 } else {
   console.log('O botão não foi encontrado.');
 }
