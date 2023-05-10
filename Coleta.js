@@ -565,3 +565,5 @@ var evento = new KeyboardEvent('keydown', {
 
 // Dispare o evento no elemento
 elemento.dispatchEvent(evento);
+triggerClick(elemento);
+
