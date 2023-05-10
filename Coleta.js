@@ -569,8 +569,7 @@ button.dispatchEvent(evento);
 "[class*='free_send_button']"
 */
 
-const selector = '[class*='free_send_button']'; 
-const button = document.querySelector(selector);
+const button = document.querySelector("[class*='free_send_button']");
 
   var evento = new KeyboardEvent('keydown', {
   key: 'Enter',
