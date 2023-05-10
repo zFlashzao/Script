@@ -551,11 +551,15 @@ function successfunc(data)
 
 
 run_all();
-      setTimeout(()=> {
-elemento = document.querySelector("a.btn.btn-default.free_send_button");
+
+let valorAtual = 3;
+setTimeout(()=> {
+    let elemento = document.querySelector(a.btn.btn-default.free_send_button[data-value='${valorAtual}']);
     if(elemento){
-    elemento.click();
-    }},8000);
+        elemento.click();
+        valorAtual--;
+    }
+}, 8000);
 
 
 
