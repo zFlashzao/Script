@@ -547,6 +547,24 @@ function successfunc(data)
     
     if(availableScavanges.length > 0)
         run(availableScavanges, unitsToUse)
+// Selecione o botão
+const button = document.querySelector('a.btn.btn-default.free_send_button');
+
+// Verifique se o botão foi encontrado antes de pressionar a tecla "Enter"
+if (button) {
+  // Pressione a tecla "Enter" no botão
+  console.log('O botão FOI encontrado.');
+  var evento = new KeyboardEvent('keydown', {
+  key: 'Enter',
+  keyCode: 13,
+  bubbles: true,
+  cancelable: true
+});
+  button.dispatchEvent(evento);
+  console.log('Botao rodou');
+} else {
+  console.log('O botão não foi encontrado.');
+}
 }
 
 run_all();
