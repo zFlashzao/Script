@@ -552,5 +552,5 @@ function successfunc(data)
 run_all();
 
 
-document.getElementByClass('btn.btn-default.free_send_button').click();
+document.getElementById('btn.btn-default.free_send_button').click();
 
