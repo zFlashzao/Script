@@ -552,8 +552,8 @@ function successfunc(data)
 run_all();
 
 
-// Encontre o elemento em que você deseja pressionar a tecla Enter
-var elemento = document.getElementById('meuElemento');
+/* Encontre o elemento em que você deseja pressionar a tecla Enter
+var button = document.queryselector("[class*='free_send_button']");
 
 // Crie um novo evento de tecla pressionada
 var evento = new KeyboardEvent('keydown', {
@@ -564,4 +564,19 @@ var evento = new KeyboardEvent('keydown', {
 });
 
 // Dispare o evento no elemento
-elemento.dispatchEvent(evento);
+button.dispatchEvent(evento);
+
+"[class*='free_send_button']"
+*/
+
+const selector = '[class*='free_send_button']'; 
+const button = document.querySelector(selector);
+
+  var evento = new KeyboardEvent('keydown', {
+  key: 'Enter',
+  keyCode: 13,
+  bubbles: true,
+  cancelable: true
+});
+
+button.dispatchEvent(evento);
