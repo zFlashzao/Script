@@ -581,7 +581,7 @@ const button = document.querySelector("btn btn-default free_send_button");
 button.dispatchEvent(evento);
 */
 // Selecione o botão
-const button = document.querySelector('free_send_button');
+const button = document.querySelector('Começar');
 
 // Verifique se o botão foi encontrado antes de pressionar a tecla "Enter"
 if (button) {
