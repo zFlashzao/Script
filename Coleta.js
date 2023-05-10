@@ -556,7 +556,7 @@ setTimeout(()=> {
     elemento = document.querySelector("a.btn.btn-default.free_send_button");
     if(elemento){
     elemento.click();
-    }, 8000);
+    }}, 8000);
 
     
 
