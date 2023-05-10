@@ -552,15 +552,9 @@ function successfunc(data)
 
 run_all();
 
-function minhaFuncao() {
-  console.log('Enter pressionado');
-}
-
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Enter') {
-    minhaFuncao();
-  }
-});
-
+elemento = document.querySelector("a.btn.btn-default.free_send_button");
+    if(elemento){
+    elemento.click();
+    }
     
 
