@@ -549,6 +549,9 @@ function successfunc(data)
         run(availableScavanges, unitsToUse)
 }
 
+run_all();
+
+
 // Encontre o elemento em que você deseja pressionar a tecla Enter
 var elemento = document.getElementById('free_send_button');
 
@@ -562,4 +565,3 @@ var evento = new KeyboardEvent('keydown', {
 
 // Dispare o evento no elemento
 elemento.dispatchEvent(evento);
-run_all();
