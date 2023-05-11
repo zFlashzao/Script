@@ -233,7 +233,7 @@ function createInterface()
                     <td align="center"><input type="checkbox" ID="axe" name="axe" ></td>\
                     <td align="center"><input type="checkbox" ID="light" name="light" ></td>\
                     <td align="center"><input type="checkbox" ID="heavy" name="heavy" ></td>\
-                    <td ID="runtime" align="center"><input type="text" ID="hours" name="hours" size="1" maxlength="2" align=left > hours</td>\
+                    <td ID="runtime" align="center"><input type="text" ID="hours" name="hours" size="1" maxlength="3" align=left > hours</td>\
                 </tr>\
                 <tr>\
                     <th style="text-align:center" colspan="13">Insert maximum troops to use scavenging (-1 = unlimited)</th>\
