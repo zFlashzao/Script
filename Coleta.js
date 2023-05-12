@@ -561,6 +561,13 @@ setTimeout(() => {
         location.reload();
       }, 500);
     });
+
+    // Simular clique automático no botão
+    var eventoClique = new MouseEvent('click', {
+      bubbles: true,
+      cancelable: true,
+      view: window
+    });
+    elemento.dispatchEvent(eventoClique);
   }
 }, 8000);
-      
