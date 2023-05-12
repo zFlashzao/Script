@@ -554,7 +554,7 @@ run_all();
 
 setTimeout(() => {
   var elementos = document.querySelectorAll("a.btn.btn-default.free_send_button");
-  for (var i = elementos.length - 1; i >= 0; i--) {
+  for (var i = 3; i >= 0; i--) {
     var elemento = elementos[i];
     elemento.addEventListener("click", function() {
       setTimeout(() => {
