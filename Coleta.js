@@ -552,12 +552,15 @@ function successfunc(data)
 
 run_all();
 
-setTimeout(()=> {
-var elementos = document.querySelectorAll("a.btn.btn-default.free_send_button");
-for (var i = elementos.length - 1; i >= 0; i--) {
-  var elemento = elementos[i];
-  setTimeout(()=>{
-  elemento.click();
-  },5000);
-}},8000);
+setTimeout(() => {
+  var elementos = document.querySelectorAll("a.btn.btn-default.free_send_button");
+  for (var i = elementos.length - 1; i >= 0; i--) {
+    var elemento = elementos[i];
+    elemento.addEventListener("click", function() {
+      setTimeout(() => {
+        location.reload();
+      }, 500);
+    });
+  }
+}, 8000);
       
