@@ -568,7 +568,7 @@ function pressionarEnter() {
     bubbles: true,
   });
 
-  var elemento = document.getElementById("a.btn.btn-default.free_send_button");
+  var elemento = document.querySelector("a.btn.btn-default.free_send_button");
   elemento.dispatchEvent(evento);
 }
 
