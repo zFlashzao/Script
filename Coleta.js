@@ -552,27 +552,10 @@ function successfunc(data)
 
 run_all();
 
-      /*setTimeout(()=> {
-elemento = document.querySelector("a.btn.btn-default.free_send_button");
-    if(elemento){
-    elemento.click();
-    }},4000);
-*/
-function pressionarEnter() {
-  var evento = new KeyboardEvent("keydown", {
-    key: "Enter",
-    code: "Enter",
-    which: 13,
-    keyCode: 13,
-    charCode: 13,
-    bubbles: true,
-  });
-
-  document.dispatchEvent(evento);
-}
-
-// Exemplo de uso
 setTimeout(()=> {
-pressionarEnter();
-},4000);
-
+var elementos = document.querySelectorAll("a.btn.btn-default.free_send_button");
+for (var i = elementos.length - 1; i >= 0; i--) {
+  var elemento = elementos[i];
+  elemento.click();
+}},8000);
+      
