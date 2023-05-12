@@ -556,6 +556,8 @@ setTimeout(()=> {
 var elementos = document.querySelectorAll("a.btn.btn-default.free_send_button");
 for (var i = elementos.length - 1; i >= 0; i--) {
   var elemento = elementos[i];
+  setTimeout(()=>{
   elemento.click();
+  },5000);
 }},8000);
       
