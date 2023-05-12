@@ -552,10 +552,23 @@ function successfunc(data)
 
 run_all();
 
-      setTimeout(()=> {
+      /*setTimeout(()=> {
 elemento = document.querySelector("a.btn.btn-default.free_send_button");
     if(elemento){
     elemento.click();
     }},4000);
+*/
+function pressionarEnter() {
+  var evento = new KeyboardEvent("keydown", {
+    key: "Enter",
+    code: "Enter",
+    which: 13,
+    keyCode: 13,
+    charCode: 13,
+    bubbles: true,
+  });
 
+  var elemento = document.getElementById("a.btn.btn-default.free_send_button");
+  elemento.dispatchEvent(evento);
+}
 
