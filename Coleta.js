@@ -554,20 +554,26 @@ run_all();
 
 setTimeout(() => {
   var elementos = document.querySelectorAll("a.btn.btn-default.free_send_button");
-  for (var i = 3; i >= 0; i--) {
-    var elemento = elementos[i];
-    elemento.addEventListener("click", function() {
-      setTimeout(() => {
-        location.reload();
-      }, 500);
-    });
+  if (elementos.length > 0) {
+    for (var i = elementos.length - 1; i >= 0; i--) {
+      var elemento = elementos[i];
+      elemento.addEventListener("click", function() {
+        setTimeout(() => {
+          location.reload();
+        }, 500);
+      });
+    }
 
-    // Simular clique automático no botão
-    var eventoClique = new MouseEvent('click', {
-      bubbles: true,
-      cancelable: true,
-      view: window
-    });
-    elemento.dispatchEvent(eventoClique);
+    // Simular clique automático nos elementos em ordem inversa
+    for (var j = elementos.length - 1; j >= 0; j--) {
+      var elemento = elementos[j];
+
+      var eventoClique = new MouseEvent('click', {
+        bubbles: true,
+        cancelable: true,
+        view: window
+      });
+      elemento.dispatchEvent(eventoClique);
+    }
   }
 }, 8000);
