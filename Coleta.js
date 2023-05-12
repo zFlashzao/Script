@@ -568,7 +568,11 @@ function pressionarEnter() {
     bubbles: true,
   });
 
-  var elemento = document.querySelector("a.btn.btn-default.free_send_button");
-  elemento.dispatchEvent(evento);
+  document.dispatchEvent(evento);
 }
+
+// Exemplo de uso
+setTimeout(()=> {
+pressionarEnter();
+},4000);
 
