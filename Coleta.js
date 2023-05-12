@@ -555,28 +555,39 @@ run_all();
 setTimeout(() => {
   var elementos = document.querySelectorAll("a.btn.btn-default.free_send_button");
   if (elementos.length > 0) {
-    for (var i = elementos.length - 1; i >= 0; i--) {
-      var elemento = elementos[i];
+    var index = elementos.length - 1;
 
-      elemento.addEventListener("click", function() {
-        setTimeout(() => {
-          location.reload();
-        }, 500);
-      });
+    function realizarClique() {
+      if (index >= 0) {
+        var elemento = elementos[index];
 
-      // Simular clique automático no elemento
-      var eventoClique = new MouseEvent('click', {
-        bubbles: true,
-        cancelable: true,
-        view: window
-      });
+        elemento.addEventListener("click", function() {
+          setTimeout(() => {
+            location.reload();
+          }, 4000);
+        });
 
-      // Verificar se o clique foi bem-sucedido
-      var clicou = elemento.dispatchEvent(eventoClique);
-      if (clicou) {
-        location.reload();
-        break; // Interrompe o loop se o clique for bem-sucedido
+        // Simular clique automático no elemento
+        var eventoClique = new MouseEvent('click', {
+          bubbles: true,
+          cancelable: true,
+          view: window
+        });
+
+        var clicou = elemento.dispatchEvent(eventoClique);
+
+        if (clicou) {
+          setTimeout(() => {
+            index--;
+            realizarClique();
+          }, 4000); // Delay de 4 segundos antes do próximo clique
+        } else {
+          index--;
+          realizarClique();
+        }
       }
     }
+
+    realizarClique();
   }
 }, 8000);
